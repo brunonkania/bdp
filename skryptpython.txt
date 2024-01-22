@@ -1,0 +1,8 @@
+import requests
+
+url = 'http://DESKTOP-KISR4N5/fmejobsubmitter/Dashboards/zaj10.fmw?email=brunekkania%40gmail.com&data-koncowa=20230730000000&api=a8533b96-34f8-4311-96a3-618f61280342&haslo=lkj&PARAMETER=20230701000000&Maksymalne_pokrycie_chmurami=50&Nazwa-powiatu=kielecki&SourceDataset_SHAPEFILE=C%3A%5CUsers%5Cbruno%5CDownloads%5Cpowiaty%5Cpowiaty.shp&DestDataset_GEOTIFF=E%3A%5CProgram%20Files%20(x86)%5CFMEWyniki&emailk=brunekkania%40gmail.com&opt_showresult=false&opt_servicemode=sync'
+myobj = {'Authorization': 'fmetoken token=7ea4d74be0cf03567699824b986ca9c7ceb7b05c'}
+
+x = requests.post(url, headers = myobj)
+
+print(x.text)
